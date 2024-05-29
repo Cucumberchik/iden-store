@@ -1,13 +1,11 @@
 import { NextPage } from "next"
 import { ReactNode } from "react"
-import logo from "@/assets/icon/dark-icon.svg"
-import Image from "next/image"
+import style from "./page.module.scss"
 
 const Home:NextPage = ():ReactNode => {
 
   return (
-    <main>
-      <Image src={logo} alt="logo" />
+    <main className={style.main} >
     </main>
   )
 }

@@ -1,6 +1,7 @@
 import type { Metadata, NextPage } from "next";
 import { ReactNode } from "react";
 import "@/styles/global.scss"
+import Header from "@/components/header/header";
 
 export const metadata: Metadata = {
   title: "Айден Store",
@@ -19,7 +20,10 @@ const RootLayout:NextPage<Readonly<{children: React.ReactNode}>>
       <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"/>
       <link rel="manifest" href="/site.webmanifest"/>
       </head>
-      <body >{children}</body>
+      <body>
+        <Header />
+        {children}
+      </body>
     </html>
   );
 }
